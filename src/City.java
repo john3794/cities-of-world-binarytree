@@ -17,39 +17,9 @@ public class City
         this.countryName = countryName;
     }
 
-    public void setLatitude(int latitude)
-    {
-        this.latitude = latitude;
-    }
-
-    public void setLatMinutes(int latMinutes)
-    {
-        this.latMinutes = latMinutes;
-    }
-
-    public void setLongitude(int longitude)
-    {
-        this.longitude = longitude;
-    }
-
-    public void setLongMinutes(int longMinutes)
-    {
-        this.longMinutes = longMinutes;
-    }
-
-    public void setNS(String NS)
-    {
-        this.NS = NS;
-    }
-
-    public void setWE(String WE)
-    {
-        this.WE = WE;
-    }
-
     public void calculateToDecimal()
     {
-        // determine whether city longtitude is west or east of Greenwich
+        // determine whether city longitude is west or east of Greenwich
         if (WE.trim().equalsIgnoreCase("W"))
         {
             this.latDecimal = Math.abs((latMinutes / 60.0) + latitude) * -1.0;
@@ -62,26 +32,47 @@ public class City
         }
     }
 
+    public void setLatitude(int latitude)
+    {
+        this.latitude = latitude;
+    }
+    public void setLatMinutes(int latMinutes)
+    {
+        this.latMinutes = latMinutes;
+    }
+    public void setLongitude(int longitude)
+    {
+        this.longitude = longitude;
+    }
+    public void setLongMinutes(int longMinutes)
+    {
+        this.longMinutes = longMinutes;
+    }
+    public void setNS(String NS)
+    {
+        this.NS = NS;
+    }
+    public void setWE(String WE)
+    {
+        this.WE = WE;
+    }
+
     public double getLongDecimal()
     {
         return longDecimal;
     }
-
     public double getLatDecimal()
     {
         return latDecimal;
     }
-
     public String getCityName()
     {
         return cityName;
     }
-
     public String getCountryName()
     {
         return countryName;
     }
-
     public String getWE()
     {
         return WE;
