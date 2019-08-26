@@ -1,2 +1,2 @@
-# city-of-world-binarytree
+# cities-of-world-binarytree
 Binary tree implementation for Cities of the World.
